@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<bean id="helloBean" class="com.buaa.bean.HelloBean">
+		<property name="helloWorld">
+			<value>Hello!Spring</value>
+		</property>
+	</bean>
+
+
+	<!-- 单例 -->
+	<bean id="bean1" class="com.buaa.bean.Bean1" scope="singleton">
+	</bean>
+
+	<!-- 原型 -->
+	<bean id="bean2" class="com.buaa.bean.Bean2" scope="prototype">
+	</bean>
+
+
+	<!-- A bean definition with lazy init set on -->
+	<bean id="bean3" class="com.buaa.bean.Bean3" lazy-init="true"> </bean>
+
+	<!-- A bean definition with initialization method -->
+	<!-- <bean id="..." class="..." init-method="..."> </bean> -->
+
+	<!-- A bean definition with destruction method -->
+	<!-- <bean id="..." class="..." destroy-method="..."> </bean> -->
+
+	<!-- more bean definitions go here -->
+
+
+</beans>
